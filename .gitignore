@@ -1,0 +1,49 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Unused assets (variants not used in the site)
+assets/media__*
+assets/logo-all-gold.png
+assets/logo-clean-white.png
+assets/logo-luxury.png
+assets/logo-original.png
+assets/logo-white.png
+assets/preview-all-gold.png
+assets/preview-dark.png
+assets/preview-logo-clean-white.png
+assets/preview-logo-luxury.png
