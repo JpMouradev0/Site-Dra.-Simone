@@ -310,5 +310,30 @@
     });
   }
 
+  // ── LGPD Cookie Consent Banner ──────────────────
+  var lgpdBanner = document.getElementById('lgpdBanner');
+  var lgpdAccept = document.getElementById('lgpdAccept');
+  var lgpdReject = document.getElementById('lgpdReject');
+
+  if (lgpdBanner && lgpdAccept && lgpdReject) {
+    var lgpdConsent = localStorage.getItem('lgpd-consent');
+
+    if (!lgpdConsent) {
+      setTimeout(function () {
+        lgpdBanner.classList.add('visible');
+      }, 1500);
+    }
+
+    lgpdAccept.addEventListener('click', function () {
+      localStorage.setItem('lgpd-consent', 'accepted');
+      lgpdBanner.classList.remove('visible');
+    });
+
+    lgpdReject.addEventListener('click', function () {
+      localStorage.setItem('lgpd-consent', 'rejected');
+      lgpdBanner.classList.remove('visible');
+    });
+  }
+
   console.log('Instituto Simone Guimarães - Site carregado com sucesso!');
 })();

@@ -1799,3 +1799,113 @@ button:focus-visible {
   color: var(--gold-light);
 }
 
+/* ===== LGPD COOKIE CONSENT BANNER ===== */
+.lgpd-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: rgba(15, 26, 46, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(201, 162, 39, 0.25);
+  padding: 20px 24px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+.lgpd-banner.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+.lgpd-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.lgpd-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+}
+.lgpd-icon {
+  font-size: 24px;
+  color: var(--gold-light);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.lgpd-text p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.65;
+  margin: 0;
+}
+.lgpd-text a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: var(--transition);
+}
+.lgpd-text a:hover {
+  color: var(--gold);
+}
+.lgpd-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.lgpd-btn-accept {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--navy-dark);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+.lgpd-btn-accept:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+}
+.lgpd-btn-reject {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.lgpd-btn-reject:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 768px) {
+  .lgpd-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .lgpd-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  .lgpd-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

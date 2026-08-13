@@ -1,0 +1,11 @@
+# Robots.txt - Instituto Simone Guimarães
+# https://institutosimoneguimaraes.com.br
+
+User-agent: *
+Allow: /
+
+Sitemap: https://institutosimoneguimaraes.com.br/sitemap.xml
+
+# Disallow admin/private paths if any
+Disallow: /admin/
+Disallow: /cgi-bin/
