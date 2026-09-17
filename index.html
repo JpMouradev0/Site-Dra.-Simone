@@ -2,6 +2,20 @@
 <html lang="pt-BR">
 
 <head>
+  <script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18410586311/crUDCO_2m_scEMeB7cpE',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18410586311"></script>
 <script>
