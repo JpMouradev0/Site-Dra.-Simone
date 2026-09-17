@@ -823,7 +823,14 @@ function gtag_report_conversion(url) {
       </div>
     </div>
   </div>
-
+<script>
+  // Script para aplicar rastreio em todos os links de WhatsApp automaticamente
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      gtag_report_conversion(this.href);
+    });
+  });
+</script>
   <script src="script.js"></script>
 </body>
 
